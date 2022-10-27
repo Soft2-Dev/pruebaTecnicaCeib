@@ -2,7 +2,7 @@ import 'package:dio/dio.dart';
 
 class AllApi {
   //ferasApp.php
-  static String url = 'https://api.themoviedb.org/3/';
+  static String url = 'https://jsonplaceholder.typicode.com';
   static final Dio _dio = Dio();
 
   static void configuteDio() {

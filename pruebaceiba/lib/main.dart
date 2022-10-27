@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:pruebaceiba/provider/usuarios_from_provider.dart';
 
 import 'api/AllApi.dart';
 import 'api/construcion_page.dart';
 import 'api/splash_auth_layout.dart';
 
-import 'provider/get_peliculas_provider.dart';
+import 'provider/get_usuarios.dart';
 import 'router/routers.dart';
 import 'serices/notification_service.dart';
 
@@ -26,7 +27,9 @@ class AppState extends StatelessWidget {
       providers: [
         // --------- provider login --------------
         ChangeNotifierProvider(
-            lazy: false, create: (_) => GetPeliculasProvider()),
+            lazy: false, create: (_) => GetUsuariosPrivider()),
+        ChangeNotifierProvider(
+            lazy: false, create: (_) => UsuariosFromProvider()),
       ],
       child: const MyApp(),
     );
@@ -49,9 +52,11 @@ class MyApp extends StatelessWidget {
         return MaterialPageRoute(
             builder: (BuildContext context) => Construccion());
       },
-      // theme: ThemeData.dark()
-      // // theme: ThemeData.light()
-      // //     .copyWith(appBarTheme: const AppBarTheme(color: Colors.indigo)),
+      theme: ThemeData().copyWith(
+        colorScheme:
+            ThemeData().colorScheme.copyWith(primary: const Color(0xff285E2B)),
+        errorColor: const Color(0xff285E2B),
+      ),
     );
   }
 }

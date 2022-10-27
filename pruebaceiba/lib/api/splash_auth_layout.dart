@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pruebaceiba/pages/detalle_page.dart';
+import 'package:pruebaceiba/pages/home_pages.dart';
 
 import 'package:splash_screen_view/SplashScreenView.dart';
 
@@ -10,10 +10,10 @@ class SplashScreenPage extends StatelessWidget {
     final size = MediaQuery.of(context).size;
 
     return SplashScreenView(
-      navigateRoute: DetallePage(),
+      navigateRoute: HomePage(),
       // backgroundColor: Color(0xffc330d1),
-      duration: 4000,
-      imageSize: 400,
+      duration: 200,
+      imageSize: 70,
       imageSrc: "img/logo.png",
       textType: TextType.NormalText,
       textStyle: const TextStyle(
