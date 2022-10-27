@@ -14,7 +14,7 @@ class SplashScreenPage extends StatelessWidget {
       // backgroundColor: Color(0xffc330d1),
       duration: 4000,
       imageSize: 400,
-      imageSrc: "img/splas3.png",
+      imageSrc: "img/logo.png",
       textType: TextType.NormalText,
       textStyle: const TextStyle(
         fontSize: 30.0,

@@ -25,7 +25,6 @@ class AppState extends StatelessWidget {
     return MultiProvider(
       providers: [
         // --------- provider login --------------
-
         ChangeNotifierProvider(
             lazy: false, create: (_) => GetPeliculasProvider()),
       ],
@@ -40,19 +39,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Pelis',
-        home: const SplashScreenPage(),
-        initialRoute: 'splas',
-        routes: getRutas(),
-        scaffoldMessengerKey: NotificationService.msnKey,
-        onGenerateRoute: (RouteSettings settings) {
-          return MaterialPageRoute(
-              builder: (BuildContext context) => Construccion());
-        },
-        theme: ThemeData.dark()
-        // theme: ThemeData.light()
-        //     .copyWith(appBarTheme: const AppBarTheme(color: Colors.indigo)),
-        );
+      debugShowCheckedModeBanner: false,
+      title: 'Prueba de Ingreso',
+      home: const SplashScreenPage(),
+      initialRoute: 'splas',
+      routes: getRutas(),
+      scaffoldMessengerKey: NotificationService.msnKey,
+      onGenerateRoute: (RouteSettings settings) {
+        return MaterialPageRoute(
+            builder: (BuildContext context) => Construccion());
+      },
+      // theme: ThemeData.dark()
+      // // theme: ThemeData.light()
+      // //     .copyWith(appBarTheme: const AppBarTheme(color: Colors.indigo)),
+    );
   }
 }
