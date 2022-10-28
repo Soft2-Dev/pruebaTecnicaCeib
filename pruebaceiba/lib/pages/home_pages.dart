@@ -25,11 +25,11 @@ class _HomePageState extends State<HomePage> {
     final fromProvider = Provider.of<UsuariosFromProvider>(context);
     final provider = Provider.of<GetUsuariosPrivider>(context);
     final size = MediaQuery.of(context).size;
-    
+
     List<Widget> itemMap = (provider.usuarios.isNotEmpty)
         ? provider.usuarios
             .map(
-              (e) => CardItems(
+              (e) => CardItems(id: e.id!,
                   nombre: e.name!, correo: e.email!, telefono: e.phone!),
             )
             .toList()
@@ -38,8 +38,6 @@ class _HomePageState extends State<HomePage> {
                   child: CircularProgressIndicator(color: color),
                 ))
             .toList();
-
-
 
     return Scaffold(
         appBar: AppBar(

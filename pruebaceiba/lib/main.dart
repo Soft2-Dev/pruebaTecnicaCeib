@@ -8,11 +8,13 @@ import 'api/splash_auth_layout.dart';
 
 import 'provider/get_usuarios.dart';
 import 'router/routers.dart';
+import 'serices/localStorage.dart';
 import 'serices/notification_service.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   AllApi.configuteDio();
+  await LocalStorage.configurePrefs();
 
   runApp(const AppState());
 }
